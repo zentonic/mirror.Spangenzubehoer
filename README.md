@@ -6,6 +6,7 @@ Platz für
 * Interdentalbürstchen
 * frische Gummiringe
 * Zahnspangenwachs
+* Selbstklebende Spiegelfolie in einer Aussparung im Deckel
 
 Die Döschen auf [Mastodon](https://social.saarland/@holm/112083961379337663)
 
