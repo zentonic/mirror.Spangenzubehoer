@@ -1,6 +1,10 @@
 // Definitions
 // *********************
 
+// TODO: Da ich kein Mathe kann, aber die Box gebraucht habe
+// habe ich manche der Werte überschrieben und ignoriert.
+// Die (Grund-)Box soll aber wieder parametrierbar werden.
+
 detailgrad = 45;
 wandstaerke = 5;
 deckelstaerke = 2;
