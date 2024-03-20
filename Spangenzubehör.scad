@@ -19,10 +19,9 @@ vollehoehe = 20;
   hoehe = vollehoehe-sphere;
 }
 
-include <mod_Tools.scad>;
-include <mod_Deckel.scad>;
-include <mod_Tools.scad>;
-include <mod_Box.scad>;
+include <modules/mod_Deckel.scad>;
+include <modules/mod_Tools.scad>;
+include <modules/mod_Box.scad>;
 
 difference() {
   Box();
