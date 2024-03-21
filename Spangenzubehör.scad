@@ -1,5 +1,8 @@
+// License: cc-by-sa-4.0 Author: holm / Christian Müller (https://mueller.network)
+
 // Definitions
 // *********************
+//
 
 // TODO: Da ich kein Mathe kann, aber die Box gebraucht habe
 // habe ich manche der Werte überschrieben und ignoriert.

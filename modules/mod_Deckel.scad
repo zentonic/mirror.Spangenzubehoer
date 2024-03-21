@@ -1,3 +1,5 @@
+// License: cc-by-sa-4.0 Author: holm / Christian Müller (https://mueller.network)
+
 module Deckel(griff=false,spiegel=false,kante=false) {
   translate([0,vollelaenge/2,0])
   difference() {

@@ -1,3 +1,5 @@
+// License: cc-by-sa-4.0 Author: holm / Christian Müller (https://mueller.network)
+
 module roundbox(w,h,d) {
   minkowski(){
     cube([w,h,d]);

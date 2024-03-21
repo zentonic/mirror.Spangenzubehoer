@@ -1,3 +1,5 @@
+// License: cc-by-sa-4.0 Author: holm / Christian Müller (https://mueller.network)
+
 module Box() {
 // Box
   difference() {
