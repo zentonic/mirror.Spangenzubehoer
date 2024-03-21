@@ -8,7 +8,7 @@
 // habe ich manche der Werte überschrieben und ignoriert.
 // Die (Grund-)Box soll aber wieder parametrierbar werden.
 
-detailgrad = 45;
+detailgrad = 90;
 wandstaerke = 5;
 deckelstaerke = 2;
 rundung = 4;
@@ -32,7 +32,7 @@ include <modules/mod_Box.scad>;
 
 difference() {
   Box();
-  %Deckel(ausschnitt=2);
+  Deckel(ausschnitt=0.3,versatz=5);
 }
 
 scale([1,0.999,0.999])
