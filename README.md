@@ -1,5 +1,7 @@
 # Spangenzubehör
 
+> License: cc-by-sa-4.0 Author: holm / Christian Müller (https://mueller.network)
+
 3D Druck Vorlage für ein Zubehördöschen mit Schiebedeckel.
 
 Platz für
