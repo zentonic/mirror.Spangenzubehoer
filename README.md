@@ -14,8 +14,6 @@ Platz für
 
 Die Döschen auf [Mastodon](https://social.saarland/@holm/112083961379337663)
 
+![Preview](assets/Spangenzubehör.png "Vorschau")
+
 ![Foto](assets/Foto.png "Foto der Entwicklungsstufen")
-
-![Preview](assets/Preview.png "Vorschau")
-
-![Render](assets/Preview-Render.png "Render")
