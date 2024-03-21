@@ -1,12 +1,12 @@
 // License: cc-by-sa-4.0 Author: holm / Christian Müller (https://mueller.network)
 
-module Deckel(griff=false,spiegel=false,kante=false) {
+module Deckel(griff=false,spiegel=false,kante=false,ausschnitt=0) {
   translate([0,vollelaenge/2,0])
   difference() {
     union() {
       mirror_copy()
       translate([0,-vollelaenge/2,0])
-      Deckelhaelfte(kante,spiegel);
+      Deckelhaelfte(kante,spiegel,ausschnitt);
     }
     if(griff) {
       scale([0.75,1.25,1])
@@ -39,30 +39,26 @@ module Deckel(griff=false,spiegel=false,kante=false) {
   }
 }
 
-module Deckelhaelfte(kante=false,spiegel=false) {
+module Deckelhaelfte(kante=false,spiegel=false,ausschnitt=false) {
   difference() {
     // Deckelplatte
-    translate([0,rundung/3,vollehoehe-wall/2])
-    color("lime")
-    cube([vollebreite-rundung/3,(vollelaenge-2*rundung/3)/2,wall/2+.1]);
     
-    // Winkel 1
-    translate([-1,rundung/3,vollehoehe-wall/2])
-    color("brown")
-    rotate([65,0,0])
-    cube([vollebreite-rundung/3+2,wall,wall/2+1]);
-        
-    // Winkel 2
-    translate([vollebreite-rundung/3*2,vollelaenge-2*rundung/3+wall,vollehoehe])
-    color("brown")
-    rotate([-65,0,-90])
-    cube([vollebreite-rundung/3+2,wall,wall/2+1]);
-    
-    // Winkel 3
-    translate([vollebreite-rundung/3-wall/2-1,-2,vollehoehe-wall/2-1])
-    color("red")
-    rotate([45,0,45])
-    cube([10,wall,wall/2+1]);
+    translate([0,rundung/3,vollehoehe-2-ausschnitt])
+    // color("lime")
+    // cube([vollebreite-rundung/3,(vollelaenge-2*rundung/3)/2,wall/2+.1]);
+    color("indigo")
+    translate ([0,0,-2])
+    %minkowski(convexity=20) {
+      cube([vollebreite-wall*0.75,(vollelaenge-2*rundung/3)/2,deckelstaerke]);
+      //cube([40,15,1.5]);
+      color("magenta")
+      difference() {
+        translate([1,1,2])
+        sphere(1);
+        translate([0,0,0])
+        cube([2,2,2],false);
+      }
+    }
     
     // Spiegel
     if(spiegel) {

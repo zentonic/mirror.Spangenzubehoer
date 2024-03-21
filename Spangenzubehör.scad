@@ -32,12 +32,12 @@ include <modules/mod_Box.scad>;
 
 difference() {
   Box();
-  Deckel();
+  %Deckel(ausschnitt=2);
 }
 
 scale([1,0.999,0.999])
 translate([0, vollelaenge+10,-vollehoehe+wall/2]) {
-  Deckel(griff=true,spiegel=true,kante=true);
+  Deckel(griff=true,spiegel=true,kante=false);
 }
 
 
