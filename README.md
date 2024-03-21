@@ -10,7 +10,7 @@ Platz für
 * Zahnspangenwachs
 * Selbstklebende Spiegelfolie in einer Aussparung im Deckel
 
-[STL-Download](STL/Spangenzubehör.stl)
+[STL-Download](STL/)
 
 Die Döschen auf [Mastodon](https://social.saarland/@holm/112083961379337663)
 
