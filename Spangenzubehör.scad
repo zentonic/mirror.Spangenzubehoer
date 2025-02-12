@@ -8,7 +8,7 @@
 // habe ich manche der Werte überschrieben und ignoriert.
 // Die (Grund-)Box soll aber wieder parametrierbar werden.
 
-detailgrad = 90;
+detailgrad = 40;
 wandstaerke = 5;
 deckelstaerke = 2;
 rundung = 4;
