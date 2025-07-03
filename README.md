@@ -1,5 +1,13 @@
 # Spangenzubehör
 
+---
+
+> https://forgejo.mueller.network/Zentonic/Spangenzubehoer.git
+> Mirror: https://github.com/zentonic/mirror.Spangenzubehoer.git
+
+---
+
+
 > License: cc-by-sa-4.0 Author: holm / Christian Müller (https://mueller.network)
 
 3D Druck Vorlage für ein Zubehördöschen mit Schiebedeckel.
