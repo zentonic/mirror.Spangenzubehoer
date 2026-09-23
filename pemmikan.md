@@ -8,7 +8,7 @@ ROLLE: v00 auf Opus, thinking an
 - PCR 2026-09-24 01:10 (Option A+C): kein neues Release, rc.2 ist der aktuelle Code. Standard-Set ergänzt (#12): cliff.toml, CHANGELOG.md, CLAUDE.md-Stub, Branch `dev`
 - **Ab jetzt GitFlow lite**: Arbeit auf `dev` bzw. `<typ>/<nr>-…` von `dev`; `main` nur für Releases
 - Release 2.0.0: `~/bin/release` taggt immer mit `v` (`v2.0.0`), legt ein finales Release ohne STL-Anhang an. Vorher STL als `2.0.0` erzeugen/committen; danach STL ans Release hängen
-- `main` = `fcb2c0d`, Tag `2.0.0-rc.2` (signiert), Forgejo-Release als Vorabversion mit STL
+- `main` = `ff0c089`, `dev` = `main` + Pemmikan-Commit; Tag `2.0.0-rc.2` auf `fcb2c0d` (signiert), Forgejo-Release als Vorabversion mit STL
 - **Nächster Schritt (Holm, „morgen")**: Testdruck rc.2 → bei Erfolg PCR/Release **2.0.0 final** — [#10](https://forgejo.mueller.network/Zentonic/Spangenzubehoer/issues/10)
 - Branches bleiben nach Merge stehen (Holm): `fix/6-ki-layoutfix`, `fix/7-hauptsteg-zurueck`, `feat/8-schiebebox`, `feat/9-stl-rc2`
 - Bis rc.2 gab es keinen `dev`-Branch; die Merges #6–#12 gingen `--no-ff` direkt in `main`
