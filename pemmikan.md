@@ -1,10 +1,11 @@
 # 🤖🥩 OpenSCAD: Spangenzubehör-Döschen mit Schiebedeckel
-> Stand: 2026-09-24 01:06 — Claude.ai via Claude Code (CLI)
+> Stand: 2026-09-24 01:10 — Claude.ai via Claude Code (CLI)
 
 ## STAND
 
 ROLLE: v00 auf Opus, thinking an
 
+- PCR 2026-09-24 01:10: Pemmikan aktuell, Issues #6–#9 und #11 geschlossen. Release-Schritt offen: `~/bin/release` würde `v2.0.0-rc.3` erzeugen (v-Präfix, ohne cliff.toml, Inhalt nur Doku seit rc.2)
 - `main` = `fcb2c0d`, Tag `2.0.0-rc.2` (signiert), Forgejo-Release als Vorabversion mit STL
 - **Nächster Schritt (Holm, „morgen")**: Testdruck rc.2 → bei Erfolg PCR/Release **2.0.0 final** — [#10](https://forgejo.mueller.network/Zentonic/Spangenzubehoer/issues/10)
 - Branches bleiben nach Merge stehen (Holm): `fix/6-ki-layoutfix`, `fix/7-hauptsteg-zurueck`, `feat/8-schiebebox`, `feat/9-stl-rc2`
