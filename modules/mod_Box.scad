@@ -5,6 +5,8 @@ module Box() {
   innen = wall/2;
   stegdicke = 1;
   stegfuss = innen-0.5;                  // Stege stecken 0.5 im Boden
+  // Hauptsteg bewusst aussermittig: Wachsfach (Passmass) schmaler als Buerstenfach
+  steg_y = vollelaenge*0.5;
   quersteg_x = innen+11;
   zyl_x = quersteg_x+5.5;
 
@@ -22,8 +24,8 @@ module Box() {
   
   // Hauptsteg
   difference() {
-    //Hauptsteg: mittig, beidseitig 0.1 in der Wand
-    translate([innen-0.1,(vollelaenge-stegdicke)/2,stegfuss]) 
+    //Hauptsteg: beidseitig 0.1 in der Wand
+    translate([innen-0.1,steg_y,stegfuss]) 
     color("yellow")
     cube([vollebreite-wall+0.2,stegdicke,hoehe-0.7]);
     
@@ -44,8 +46,8 @@ module Box() {
     rotate([0,90,0])
     cylinder(h=4,r=2);}
       
-  // Zyl gebraucht 2/2
-  translate([zyl_x,vollelaenge/2-4/2,stegfuss]) 
+  // Zyl gebraucht 2/2: Fuss bündig mit der Stegseite zum Wachsfach
+  translate([zyl_x,steg_y+stegdicke-3,stegfuss]) 
     color("cyan")
     cylinder(h=vollehoehe-1.2-stegfuss, r1=3, r2=1.8);
 }
