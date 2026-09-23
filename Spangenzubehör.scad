@@ -9,7 +9,7 @@
 // Die (Grund-)Box soll aber wieder parametrierbar werden.
 
 detailgrad = 40;
-wandstaerke = 5;
+wandstaerke = 2.5;  // reale Wanddicke der Box
 deckelstaerke = 2;
 rundung = 4;
 vollebreite = 60;
@@ -18,7 +18,7 @@ vollehoehe = 20;
 
 // Prozessvariablen
 {
-  wall = wandstaerke;
+  wall = 2*wandstaerke;
   $fn = detailgrad;
   sphere = rundung;
   breite = vollebreite-2*sphere;
@@ -30,6 +30,8 @@ include <modules/mod_Deckel.scad>;
 include <modules/mod_Tools.scad>;
 include <modules/mod_Box.scad>;
 
+// Deckel und Nut haben seitlich bewusst kein Spiel: Presssitz für
+// robustes Schieben und Arretieren durch flächigen Druck.
 difference() {
   Box();
   Deckel(ausschnitt=0.3,versatz=5);
@@ -37,7 +39,6 @@ difference() {
 
 scale([1,0.999,0.999])
 translate([0, vollelaenge+10,-vollehoehe+wall/2]) {
-  Deckel(griff=true,spiegel=true,kante=false);
+  Deckel(griff=true,spiegel=true);
 }
-
 
