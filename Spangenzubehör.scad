@@ -4,13 +4,10 @@
 // *********************
 //
 
-// TODO: Da ich kein Mathe kann, aber die Box gebraucht habe
-// habe ich manche der Werte überschrieben und ignoriert.
-// Die (Grund-)Box soll aber wieder parametrierbar werden.
-
 detailgrad = 40;
-wandstaerke = 2.5;  // reale Wanddicke der Box
-deckelstaerke = 2;
+wandstaerke = 2.5;    // reale Wanddicke der Box
+deckelstaerke = 3;    // reale Dicke des Schiebedeckels
+hinterschnitt = 0.4;  // wie weit der Rand über den Deckel greift (Arretierung)
 rundung = 4;
 vollebreite = 60;
 vollelaenge = 25;
@@ -20,25 +17,26 @@ vollehoehe = 20;
 {
   wall = 2*wandstaerke;
   $fn = detailgrad;
-  sphere = rundung;
-  breite = vollebreite-2*sphere;
-  laenge = vollelaenge-2*sphere;
-  hoehe = vollehoehe-sphere;
+  // Deckel und Nut haben bewusst kein Spiel: Presssitz für robustes
+  // Schieben und Arretieren durch flächigen Druck. Nuttiefe und Restwand
+  // am Ende sind die bewährten Werte der Spangendose.
+  P = sb_param(laenge=vollebreite, breite=vollelaenge, hoehe=vollehoehe,
+               wand=wandstaerke, rundung=rundung,
+               deckel_d=deckelstaerke, kante_r=1, hinterschnitt=hinterschnitt,
+               nut_tiefe=wandstaerke-rundung/3, rest_ende=0.7*wandstaerke);
+  hoehe = vollehoehe-rundung;
 }
 
+include <modules/mod_Schiebebox.scad>;
 include <modules/mod_Deckel.scad>;
-include <modules/mod_Tools.scad>;
 include <modules/mod_Box.scad>;
 
-// Deckel und Nut haben seitlich bewusst kein Spiel: Presssitz für
-// robustes Schieben und Arretieren durch flächigen Druck.
 difference() {
   Box();
-  Deckel(ausschnitt=0.3,versatz=5);
+  sb_nut(P);
 }
 
 scale([1,0.999,0.999])
-translate([0, vollelaenge+10,-vollehoehe+wall/2]) {
+translate([0, vollelaenge+10, 0]) {
   Deckel(griff=true,spiegel=true);
 }
-

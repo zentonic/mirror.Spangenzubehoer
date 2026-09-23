@@ -1,7 +1,8 @@
 {
     "parameterSets": {
         "Standardwerte des Designs": {
-            "deckelstaerke": "2",
+            "deckelstaerke": "3",
+            "hinterschnitt": "0.4",
             "detailgrad": "40",
             "rundung": "4",
             "vollebreite": "60",
@@ -10,7 +11,8 @@
             "wandstaerke": "2.5"
         },
         "Variante 75 mm": {
-            "deckelstaerke": "2",
+            "deckelstaerke": "3",
+            "hinterschnitt": "0.4",
             "detailgrad": "45",
             "rundung": "2",
             "vollebreite": "75",
